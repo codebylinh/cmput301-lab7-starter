@@ -40,14 +40,13 @@ public class MainActivity extends AppCompatActivity {
         cityAdapter = new ArrayAdapter<>(this, R.layout.content, dataList);
         cityList.setAdapter(cityAdapter);
 
-        // ⬇️ Add this block RIGHT AFTER setAdapter(...)
         cityList.setOnItemClickListener((parent, view, position, id) -> {
             String name = cityAdapter.getItem(position);
             Intent i = new Intent(MainActivity.this, ShowActivity.class);
             i.putExtra(ShowActivity.EXTRA_CITY_NAME, name);
             startActivity(i);
         });
-        // ⬆️
+
 
         final Button addButton = findViewById(R.id.button_add);
         addButton.setOnClickListener(new View.OnClickListener() {

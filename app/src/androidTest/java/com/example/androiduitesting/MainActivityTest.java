@@ -33,7 +33,7 @@ public class MainActivityTest {
     public void testAddCity(){
         // Click on Add City button
         onView(withId(R.id.button_add)).perform(click());
-// Type "Edmonton" in the editText
+        // Type "Edmonton" in the editText
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Edmonton"));
         // Click on Confirm
         onView(withId(R.id.button_confirm)).perform(click());
